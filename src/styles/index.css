@@ -1,12 +1,30 @@
-
-/* 
-
-    You can write your own styles here...
+body{
+    background-color: rgb(39, 161, 65);
+}
+.page {
+    display: flex;
+    flex-direction: column;
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+    align-items: center;
+}
 
-*/
+
+.board {
+    padding:0px;
+    margin: 10px;
+    
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.square {
+    border: 1px solid rgb(39, 161, 65);
+    background-color: white;
+    flex: 1 1 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    min-height: 100px;
+}
