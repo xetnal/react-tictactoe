@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { Board } from "./board.jsx";
-import { Reset } from "./reset.jsx";
+
+import { Welcome } from "./welcome.jsx";
+import { WelcomeBtn } from "./welcomeBtn.jsx";
 
 //create your first component
 const Home = () => {
+	const [needsWelcome, setWelcome] = useState(true);
+
 	return (
 		<div className="page">
-			<h1>Tic-Tac-Toe in React!</h1>
-
-			<Board />
+			{needsWelcome ? (
+				<div className="theWelcome animate__animated animate__fadeInDownBig">
+					<Welcome />
+					<WelcomeBtn
+						onClick={() => {
+							setWelcome();
+							console.log(needsWelcome);
+						}}
+					/>
+				</div>
+			) : (
+				<Board />
+			)}
 		</div>
 	);
 };

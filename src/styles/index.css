@@ -23,6 +23,8 @@ body{
     display: flex;
     text-shadow:2px 2px 5px rgb(8, 133, 18);
     flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
 }
 .square {
     border: 1px solid rgb(39, 161, 65, .8);
@@ -31,7 +33,33 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
-    min-height: 100px;
+    font-size: 70px;
+    min-height: 130px;
     
+}
+
+.theWelcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+.ready{
+    font-size: 150px;
+}
+.readyBtn {
+    height: 200px;
+    width: 400px;
+    font-size: 50px;
+}
+.title{
+    font-size: 100px;
+}
+.gameContariner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

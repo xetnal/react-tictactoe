@@ -27,6 +27,7 @@ export const Board = () => {
 					if (squares[i] != null || winner != null) {
 						return;
 					}
+
 					console.log("clicked!");
 					let nextSquares = [...squares];
 					nextSquares[i] = isXNext ? "X" : "O";
@@ -46,11 +47,18 @@ export const Board = () => {
 		}
 	};
 	return (
-		<>
-			<h2>{getStatus()}</h2>
-			<div>{renderReset()}</div>
+		<div className="gameContainer g-0 ">
+			<h1 className="title animate__animated animate__fadeInDown">
+				Tic-Tac-Toe in React!
+			</h1>
+			<h2 className="subtitle text-center animate__animated animate__fadeInRight">
+				{getStatus()}
+			</h2>
+			<div className="resetContainer text-center animate__animated animate__fadeInLeft">
+				{renderReset()}
+			</div>
 
-			<div className="board">
+			<div className="board mx-auto animate__animated animate__fadeInUp">
 				{renderSquare(0)}
 				{renderSquare(1)}
 				{renderSquare(2)}
@@ -63,6 +71,6 @@ export const Board = () => {
 				{renderSquare(7)}
 				{renderSquare(8)}
 			</div>
-		</>
+		</div>
 	);
 };
