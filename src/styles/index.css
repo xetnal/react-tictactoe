@@ -1,5 +1,10 @@
 body{
-    background-color: rgb(39, 161, 65);
+    background-image: url(https://cdn.wallpapersafari.com/11/91/sLlxKg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow:2px 2px 5px red
+
 }
 .page {
     display: flex;
@@ -12,19 +17,21 @@ body{
 .board {
     padding:0px;
     margin: 10px;
-    
+    color: rgb(255, 255, 255);
     height: 400px;
     width: 400px;
     display: flex;
+    text-shadow:2px 2px 5px rgb(8, 133, 18);
     flex-wrap: wrap;
 }
 .square {
-    border: 1px solid rgb(39, 161, 65);
-    background-color: white;
+    border: 1px solid rgb(39, 161, 65, .8);
+    background-color: rgb(168, 24, 24);
     flex: 1 1 32%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
     min-height: 100px;
+    
 }

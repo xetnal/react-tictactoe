@@ -3,7 +3,7 @@ import { calculateWinner, isDraw } from "../index.js";
 import { Reset } from "./reset.jsx";
 import { Square } from "./square.jsx";
 
-export const Board = (props) => {
+export const Board = () => {
 	const [squares, setSquares] = useState(Array(9).fill(null));
 	const [isXNext, setIsXNext] = useState(true);
 
@@ -24,6 +24,9 @@ export const Board = (props) => {
 			<Square
 				value={squares[i]}
 				onClick={() => {
+					if (squares[i] != null || winner != null) {
+						return;
+					}
 					console.log("clicked!");
 					let nextSquares = [...squares];
 					nextSquares[i] = isXNext ? "X" : "O";
